@@ -1,6 +1,7 @@
 const VERSION = 1;
 
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+const bounded = value => clamp(Number(value), 0, 100);
 
 export function createFighter({ id, name, background = "untrained", body = {} }) {
   if (!id || !name) throw new Error("fighter requires id and name");
@@ -23,6 +24,11 @@ export function createFighter({ id, name, background = "untrained", body = {} })
       balance: Number(body.balance ?? 10),
       coordination: Number(body.coordination ?? 10)
     },
+    needs: {
+      nutrition: 100,
+      hydration: 100,
+      sleep: 100
+    },
     condition: {
       staminaMax,
       stamina: staminaMax,
@@ -41,17 +47,44 @@ export function createFighter({ id, name, background = "untrained", body = {} })
   };
 }
 
+export function applyNeeds(fighter, changes = {}) {
+  const next = structuredClone(fighter);
+  for (const key of ["nutrition", "hydration", "sleep"]) {
+    const delta = Number(changes[key] ?? 0);
+    next.needs[key] = bounded(next.needs[key] + delta);
+  }
+  next.history.push({ type: "needs", changes: {
+    nutrition: Number(changes.nutrition ?? 0),
+    hydration: Number(changes.hydration ?? 0),
+    sleep: Number(changes.sleep ?? 0)
+  }});
+  return next;
+}
+
+export function addInjury(fighter, injury) {
+  if (!injury?.id || !injury?.region) throw new Error("injury requires id and region");
+  const next = structuredClone(fighter);
+  const normalized = {
+    id: injury.id,
+    region: injury.region,
+    severity: bounded(injury.severity ?? 0),
+    pain: bounded(injury.pain ?? 0)
+  };
+  next.condition.injuries.push(normalized);
+  next.condition.pain = bounded(next.condition.injuries.reduce((total, item) => total + item.pain, 0));
+  next.history.push({ type: "injury", ...normalized });
+  return next;
+}
+
 export function applyActivity(fighter, activity) {
   const next = structuredClone(fighter);
   const staminaCost = Math.max(0, Number(activity.staminaCost ?? 0));
   const fatigueGain = Math.max(0, Number(activity.fatigueGain ?? staminaCost * 0.25));
 
-  if (next.condition.stamina < staminaCost) {
-    throw new Error("insufficient stamina");
-  }
+  if (next.condition.stamina < staminaCost) throw new Error("insufficient stamina");
 
   next.condition.stamina = clamp(next.condition.stamina - staminaCost, 0, next.condition.staminaMax);
-  next.condition.fatigue = clamp(next.condition.fatigue + fatigueGain, 0, 100);
+  next.condition.fatigue = bounded(next.condition.fatigue + fatigueGain);
   next.history.push({ type: "activity", id: activity.id ?? "unknown", staminaCost, fatigueGain });
   return next;
 }
@@ -59,7 +92,7 @@ export function applyActivity(fighter, activity) {
 export function recover(fighter, { stamina = 0, fatigue = 0 } = {}) {
   const next = structuredClone(fighter);
   next.condition.stamina = clamp(next.condition.stamina + Math.max(0, stamina), 0, next.condition.staminaMax);
-  next.condition.fatigue = clamp(next.condition.fatigue - Math.max(0, fatigue), 0, 100);
+  next.condition.fatigue = bounded(next.condition.fatigue - Math.max(0, fatigue));
   next.history.push({ type: "recovery", stamina: Math.max(0, stamina), fatigue: Math.max(0, fatigue) });
   return next;
 }
