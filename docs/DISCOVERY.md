@@ -177,3 +177,20 @@ Taijifu, HNK, TEHKNÉ, outros jogos, chats e repositórios podem fornecer know-h
 > **O personagem não recebe poder. Ele constrói poder.**
 
 > **SANGUE + SUOR + TEMPO + EXPERIÊNCIA → EVOLUÇÃO.**
+
+
+## 16. Sistema de luta por command inputs
+
+**Nova decisão aprovada.** O sistema de luta utiliza a linguagem de comandos de fighting games, como Street Fighter.
+
+O jogador não seleciona simplesmente um poder em um menu. Técnicas especiais podem exigir combinações específicas de direções, botões, sequências e timing.
+
+Exemplo conceitual: **↓ → + ataque**.
+
+A sensação desejada é semelhante ao princípio do **Flash Kick de Guile**: existe uma entrada específica que o jogador precisa executar para produzir o golpe especial.
+
+No PAU PRA TODA OBRA, entretanto, o golpe está ligado ao sistema marcial e à progressão do próprio personagem. Conhecer uma técnica, possuir proficiência e executar corretamente seu comando são camadas relacionadas, mas distintas.
+
+**COMMAND INPUT + TÉCNICA APRENDIDA + PROFICIÊNCIA + ESTADO + TIMING → EXECUÇÃO**
+
+Possíveis famílias de comando: combinações direcionais + ataque, sequências de ataques, cargas, múltiplos botões e comandos condicionados ao estado corporal. Os comandos individuais e o layout final continuam TBD.
