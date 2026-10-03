@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - feat/**
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fighter-core:
+    name: Fighter Core Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: packages/fighter-core/package.json
+
+      - name: Run fighter-core tests
+        working-directory: packages/fighter-core
+        run: npm test
