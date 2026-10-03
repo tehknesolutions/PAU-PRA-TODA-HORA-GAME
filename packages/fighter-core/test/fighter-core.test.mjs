@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 import {
   createFighter,
   applyActivity,
+  applyNeeds,
+  addInjury,
   recover,
   prepareCombat,
   serializeFighter,
@@ -16,6 +18,18 @@ test("creates an inexperienced persistent fighter", () => {
   assert.deepEqual(fighter.martial.arts, {});
 });
 
+test("fighter starts with independent survival needs", () => {
+  const fighter = createFighter({ id: "p1", name: "Rookie" });
+  assert.deepEqual(fighter.needs, { nutrition: 100, hydration: 100, sleep: 100 });
+});
+
+test("needs change independently and remain bounded", () => {
+  const fighter = createFighter({ id: "p1", name: "Rookie" });
+  const after = applyNeeds(fighter, { nutrition: -15, hydration: -200, sleep: -20 });
+  assert.deepEqual(after.needs, { nutrition: 85, hydration: 0, sleep: 80 });
+  assert.deepEqual(fighter.needs, { nutrition: 100, hydration: 100, sleep: 100 });
+});
+
 test("activity spends stamina and accumulates fatigue deterministically", () => {
   const fighter = createFighter({ id: "p1", name: "Rookie" });
   const after = applyActivity(fighter, { id: "roadwork", staminaCost: 20, fatigueGain: 8 });
@@ -27,6 +41,18 @@ test("activity spends stamina and accumulates fatigue deterministically", () => 
 test("cannot train without enough stamina", () => {
   const fighter = createFighter({ id: "p1", name: "Rookie", body: { staminaMax: 10 } });
   assert.throws(() => applyActivity(fighter, { staminaCost: 11 }), /insufficient stamina/);
+});
+
+test("injuries preserve region severity and pain as persistent state", () => {
+  const fighter = createFighter({ id: "p1", name: "Rookie" });
+  const after = addInjury(fighter, { id: "ankle-sprain", region: "left-ankle", severity: 30, pain: 20 });
+  assert.deepEqual(after.condition.injuries[0], {
+    id: "ankle-sprain",
+    region: "left-ankle",
+    severity: 30,
+    pain: 20
+  });
+  assert.equal(after.condition.pain, 20);
 });
 
 test("recovery restores stamina but does not magically exceed capacity", () => {
@@ -48,6 +74,8 @@ test("combat stamina reflects persistent preparation", () => {
 
 test("fighter save/load round trip preserves state", () => {
   let fighter = createFighter({ id: "p1", name: "Rookie", background: "taekwondo-beginner" });
+  fighter = applyNeeds(fighter, { hydration: -12 });
+  fighter = addInjury(fighter, { id: "bruise", region: "torso", severity: 5, pain: 3 });
   fighter = applyActivity(fighter, { id: "mobility", staminaCost: 12, fatigueGain: 3 });
   const restored = deserializeFighter(serializeFighter(fighter));
   assert.deepEqual(restored, fighter);
