@@ -1,196 +1,240 @@
-# DISCOVERY — PAU PRA TODA OBRA
+# DISCOVERY — KILLER FISTS: ORANKORK
 
-Status: **APROVADO / consolidado a partir da sessão de Discovery**
+Status: **APROVADO / consolidado e em evolução**
 
-## 1. Fantasia central
+## 1. Identidade oficial
 
-O jogador cria um personagem do zero, inicia como lutador iniciante e busca tornar-se **o maior lutador do mundo**.
+**Título oficial:** Killer Fists: OranKork
 
-O poder deve ser conquistado por sangue, suor, tempo, treino e experiência. O personagem pode tornar-se extraordinariamente forte, técnico e completo, mas isso deve ser resultado da trajetória vivida.
+Killer Fists é a identidade principal do jogo/franquia. **OranKork** identifica a ameaça e campanha central desta obra.
 
-## 2. Identidade do jogo
+## 2. Fantasia central
+
+O jogador escolhe entre **15 personagens-base**.
+
+Cada personagem começa praticamente do zero: **magro, sem capacidade real de luta, sem domínio técnico e sem reputação como lutador**.
+
+O jogador precisa construir o lutador através da vida vivida:
+
+`ZERO → TREINO → CORPO → TÉCNICA → LUTAS → EXPERIÊNCIA → FAMA → GRANDE GUERRA → ORANKORK → VILÃO`
+
+O personagem pode tornar-se extremamente poderoso e conhecido, mas isso deve ser resultado de sangue, suor, tempo, treino e experiência.
+
+## 3. Objetivo narrativo
+
+A trajetória culmina na **Grande Guerra** e no objetivo de **derrotar o vilão dono/líder da organização maligna OranKork**.
+
+Tornar-se um dos lutadores mais conhecidos do mundo faz parte da fantasia de ascensão e progressão, mas o eixo narrativo central é o conflito contra a OranKork.
+
+## 4. Identidade de gênero
 
 - Survival Martial MMORPG / RPG
 - Life Simulation
 - Progression-by-Use
 - 3D Fighting System
-- Combate com resposta de fighting game, profundidade de MMA e apresentação cinematográfica
-- Referência de qualidade visual: fighting games 3D modernos
+- Command-input Fighting
+- Arcade + Simulação
+- profundidade marcial/MMA
+- apresentação cinematográfica
+- campanha de ascensão + Grande Guerra
 
-## 3. Personagem persistente
+## 5. Personagens
 
-- Criado do zero como em MMORPG
-- Background define ponto de partida, não classe permanente
-- Começa como iniciante
-- Evolui através daquilo que treina, pratica e utiliza
-- Vitória concede mais EXP, mas derrota também produz experiência
-- Histórico de combate e treino participa da identidade marcial
-- Estilo pessoal emerge da trajetória
+A seleção possui **15 personagens**.
 
-## 4. Progressão por uso
+Eles não começam como mestres prontos. O conceito é selecionar uma pessoa que ainda será construída como lutador através do sistema persistente de treinamento e experiência.
+
+As identidades, histórias, atributos iniciais e diferenças entre os 15 permanecem abertas onde ainda não foram definidas.
+
+## 6. Progressão por uso
 
 O Level geral representa experiência acumulada, mas não substitui competência.
 
 Cada camada pode evoluir independentemente:
 
-- atributos físicos
-- capacidades marciais
+- massa/corpo
+- força
+- endurance/cardio
+- mobilidade
+- flexibilidade
+- potência
+- equilíbrio
+- coordenação
 - artes marciais
 - famílias técnicas
 - técnicas individuais
-- integração entre técnicas/artes
+- integrações
 - experiência prática
 - estilo pessoal
+- reputação/fama
 
-Exemplo aprovado conceitualmente: uma técnica como **Bandal Tchagui (Taekwondo)** possui sua própria progressão conforme treino e aplicação, em espírito semelhante às skills desenvolvidas por uso em RPGs persistentes.
+O personagem cresce através daquilo que efetivamente treina e utiliza.
 
-## 5. Artes marciais
+## 7. Aprendizado técnico
 
-- Artes reais preservam identidade e proveniência
-- Sistemas originais podem coexistir sem apagar a origem das técnicas
-- Cada estilo é aprendível e evoluível
-- Não existe limite artificial de quantas artes podem ser aprendidas
-- Tempo, professores, recursos, corpo, recuperação e dedicação são limites naturais
-- Aprender uma arte não significa dominá-la
-- Currículo: professor/escola → pré-requisitos → ensino → treino → proficiência → sparring → aplicação → maestria
-- Conhecer duas artes não concede automaticamente integração entre elas
+Uma técnica individual possui sua própria trajetória.
 
-## 6. Corpo adaptativo
+A experiência contextual consolidada segue:
 
-Inspirado no princípio de corpo persistente de jogos de simulação: a aparência e as capacidades mudam conforme a vida do personagem.
+`observed → recognized → defended → reproduced → adapted → mastered`
 
-Cada foco produz adaptações diferentes:
+Repetição isolada pode desenvolver prática, mas não deve automaticamente equivaler a maestria.
+
+Vitória produz experiência; derrota também pode ensinar.
+
+## 8. Artes marciais
+
+- estilos são aprendíveis e evoluíveis
+- artes reais preservam identidade/proveniência
+- aprender uma arte não significa dominá-la
+- técnicas evoluem individualmente
+- conhecer duas artes não concede integração automática
+- integração precisa ser praticada
+- professores, academias, currículos e experiência podem participar do aprendizado
+
+Taijifu permanece uma importante fonte de know-how marcial do ecossistema, sem governar automaticamente o cânone deste jogo.
+
+## 9. Corpo adaptativo
+
+O personagem começa magro e pouco desenvolvido para combate. O corpo muda conforme o treinamento e a vida.
+
+Exemplos:
 
 - hipertrofia → massa muscular + contribuição para força
-- força → capacidade de produção de força
-- cardio → endurance/capacidade aeróbica/recuperação
+- força → produção de força
+- cardio → endurance e recuperação
 - flexibilidade → amplitude
-- mobilidade → deslocamento e transições
+- mobilidade → deslocamento/transições
 - potência → produção rápida de força
 - equilíbrio → estabilidade
 - coordenação → controle motor
 
-Trade-offs são orgânicos, não penalidades arbitrárias. Um personagem pode desenvolver múltiplas capacidades em alto nível, mas isso exige mais trabalho, tempo e integração.
+A evolução deve possuir manifestação funcional e, quando aplicável, visual.
 
-## 7. Stamina Core
+## 10. Stamina Core
 
-**Stamina é o recurso operacional central.** Sem stamina suficiente, o personagem não consegue treinar ou lutar adequadamente.
+**Stamina é o recurso operacional central.** Sem stamina adequada, treinar e lutar tornam-se limitados.
 
 Duas escalas:
 
-1. **Stamina Persistente** — energia disponível na vida/rotina.
-2. **Stamina de Combate** — capacidade operacional durante uma luta, condicionada pelo estado em que o personagem chegou ao combate.
+1. Stamina Persistente — energia da rotina/vida.
+2. Stamina de Combate — capacidade operacional dentro da luta, influenciada pelo estado anterior.
 
-Cardio influencia capacidade, eficiência e recuperação, mas não é sinônimo de stamina.
+## 11. Survival
 
-## 8. Survival / necessidades
-
-Sistemas relacionados, mas distintos:
+Sistemas relacionados:
 
 - nutrição
 - hidratação
 - sono
-- stamina persistente
-- stamina de combate
+- stamina
 - fadiga
 - saúde/condição
-- dor/lesões
+- dor
+- lesões
+- recuperação
 
-Loop central:
+Loop:
 
 `ABASTECER → TREINAR → GASTAR → RECUPERAR → ADAPTAR → CRESCER → PREPARAR → LUTAR → APRENDER → RECUPERAR`
 
-## 9. Tempo e vida
+## 12. Combate por Command Inputs
 
-- ciclo dia/noite
-- calendário
-- semanas e temporadas
-- compromissos
-- academias e horários
-- camps
-- competições
-- recuperação
-- envelhecimento
-- atividades longas podem avançar tempo de forma controlada
+O combate utiliza comandos de fighting games.
 
-O personagem percorre juventude, desenvolvimento, auge, veterania e aposentadoria competitiva. A vida marcial pode continuar como professor, mestre ou treinador.
+Combinações de direções, botões, sequências, cargas e timing podem executar ataques/técnicas especiais.
 
-## 10. Legado
+A referência conceitual de interação inclui sistemas como Street Fighter: um movimento especial possui uma entrada que precisa ser executada pelo jogador, como ocorre conceitualmente com golpes de comando do gênero.
 
-A jornada individual pode terminar, mas elementos conquistados podem permanecer no mundo: reputação, academia, alunos, registros, conhecimento transmissível, troféus, relações e impacto histórico.
+No Killer Fists, saber o comando não substitui o aprendizado do personagem.
 
-## 11. Combate
+`COMMAND INPUT + TÉCNICA APRENDIDA + PROFICIÊNCIA + ESTADO + TIMING → EXECUÇÃO`
 
-Sensação aprovada:
+O mesmo comando pode produzir resultados diferentes conforme proficiência, stamina, fadiga, coordenação, lesões, distância, postura e situação.
 
+## 13. Combate
+
+Direção aprovada:
+
+- 3D
+- fighting game + MMA
 - Arcade + Simulação
-- apresentação cinematográfica
-- MMA/fighting game híbrido
-- câmera híbrida dinâmica
 - movimentação híbrida
-
-Condições de vitória incluem:
-
+- câmera dinâmica
+- momentos cinematográficos
 - KO
 - TKO
 - submissão
 - decisão
-- interrupções contextuais apropriadas
+- interrupções contextuais
 
-## 12. Dano adaptativo
+## 14. Dano e condição
 
-O sistema pode representar internamente:
+O sistema pode representar:
 
-- vida/condição
+- condição/saúde
 - stamina
 - dano localizado
 - knockdown
 - stun
-- recuperação
 - cortes
 - inchaço
 - sangramento
-- lesões e penalidades temporárias
+- dor
+- lesões
+- recuperação
 
-A interface deve permanecer legível; o corpo e o comportamento do lutador comunicam parte do estado.
+Lesões e condição persistente podem interferir no treinamento e na luta.
 
-## 13. Lutadores iniciais do Discovery
+## 15. Fama
 
-### Khabib Nurgaliyev
-Personagem inspirado fortemente no perfil marcial de Khabib Nurmagomedov, sem ser o atleta real. Foco conceitual em MMA, wrestling/sambo, pressão, quedas, controle e grappling.
+A ascensão social/esportiva faz parte da fantasia central.
 
-### Al Quinto
-Personagem inspirado no contexto do adversário citado durante o Discovery, com identidade própria a ser aprofundada.
+O personagem começa desconhecido e pode tornar-se um dos lutadores mais conhecidos do mundo através de treinamento, feitos e combates.
 
-Esses personagens não substituem o protagonista criado pelo jogador no modo persistente.
+A implementação exata de ranking, mídia, fãs, patrocínio e reputação permanece TBD.
 
-## 14. Referências e soberania
+## 16. OranKork
 
-Taijifu, HNK, TEHKNÉ, outros jogos, chats e repositórios podem fornecer know-how, taxonomias, técnicas, padrões e aprendizados.
+**OranKork** é a organização maligna central da campanha.
 
-**Nenhuma referência externa governa automaticamente este projeto.**
+Seu dono/líder é o vilão principal e alvo final do arco narrativo.
+
+Estado atual do vilão:
+
+- cabeça/visual da cabeça: **definida pelo criador**
+- corpo: **TBD**
+- estilo de luta: TBD
+- poderes/capacidades: TBD
+- história/motivação: TBD
+- nome individual, se distinto: TBD
+
+Não preencher essas lacunas por inferência.
+
+## 17. Grande Guerra
+
+A **Grande Guerra** é parte aprovada do arco macro da campanha.
+
+A escalada exata — facções, causa, lados, duração, territórios, papel da OranKork e participação dos 15 personagens — permanece TBD e será objeto de Discovery próprio.
+
+## 18. Tempo, vida e legado
+
+O mundo pode incluir calendário, treino, recuperação, academias, competições, camps, envelhecimento, auge, veterania e legado.
+
+A jornada não é apenas uma sequência de lutas: a vida do personagem produz o lutador.
+
+## 19. Soberania
+
+Taijifu, HNK, TEHKNÉ, outros jogos, chats e repositórios podem fornecer know-how, taxonomias, técnicas, assets e aprendizados.
+
+**Nenhuma referência externa governa automaticamente Killer Fists: OranKork.**
 
 `CONSULTA ≠ IMPORTAÇÃO ≠ APROVAÇÃO ≠ CÂNONE`
 
-## 15. Princípio final
+## 20. Princípio final
 
 > **O personagem não recebe poder. Ele constrói poder.**
 
 > **SANGUE + SUOR + TEMPO + EXPERIÊNCIA → EVOLUÇÃO.**
 
-
-## 16. Sistema de luta por command inputs
-
-**Nova decisão aprovada.** O sistema de luta utiliza a linguagem de comandos de fighting games, como Street Fighter.
-
-O jogador não seleciona simplesmente um poder em um menu. Técnicas especiais podem exigir combinações específicas de direções, botões, sequências e timing.
-
-Exemplo conceitual: **↓ → + ataque**.
-
-A sensação desejada é semelhante ao princípio do **Flash Kick de Guile**: existe uma entrada específica que o jogador precisa executar para produzir o golpe especial.
-
-No PAU PRA TODA OBRA, entretanto, o golpe está ligado ao sistema marcial e à progressão do próprio personagem. Conhecer uma técnica, possuir proficiência e executar corretamente seu comando são camadas relacionadas, mas distintas.
-
-**COMMAND INPUT + TÉCNICA APRENDIDA + PROFICIÊNCIA + ESTADO + TIMING → EXECUÇÃO**
-
-Possíveis famílias de comando: combinações direcionais + ataque, sequências de ataques, cargas, múltiplos botões e comandos condicionados ao estado corporal. Os comandos individuais e o layout final continuam TBD.
+> **ZERO → LUTADOR → FAMA → GRANDE GUERRA → ORANKORK → VILÃO.**
