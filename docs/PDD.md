@@ -52,3 +52,12 @@ O jogador deve conseguir comparar o personagem recém-criado com sua versão ap�
 ## North Star
 
 > Começar como iniciante e conquistar, através de uma vida marcial, o direito de ser reconhecido como o maior lutador do mundo.
+
+
+## Combate
+
+O produto utiliza um sistema de luta 3D com **command inputs de fighting games**. Combinações de direções, botões, sequências e timing executam técnicas especiais, criando uma camada de habilidade do jogador sobre a progressão marcial persistente.
+
+A referência de interação inclui Street Fighter e o princípio de golpes como o Flash Kick de Guile. O conteúdo marcial do jogo permanece próprio e ligado à trajetória do personagem.
+
+**COMMAND INPUT + TÉCNICA + PROFICIÊNCIA + ESTADO + TIMING → EXECUÇÃO**
