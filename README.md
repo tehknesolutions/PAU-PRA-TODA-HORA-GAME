@@ -36,3 +36,14 @@ O Level geral representa a trajetória; ele não concede poder gratuitamente. Ca
 Este projeto é soberano sobre si mesmo. Repositórios, chats e projetos como Taijifu, HNK, TEHKNÉ e outros são fontes de consulta e reaproveitamento, não autoridades automáticas sobre este jogo.
 
 `CONSULTAR → IDENTIFICAR KNOW-HOW → AVALIAR → ADAPTAR → PROPOR → APROVAR → INCORPORAR`
+
+
+## Combate por comandos
+
+O sistema de luta usa **command inputs de fighting games**: combinações de direções, botões, sequências e timing podem executar técnicas especiais. A referência de interação é Street Fighter; conceitualmente, um golpe pode exigir uma entrada semelhante ao princípio do Flash Kick de Guile.
+
+No jogo, porém, a técnica pertence à trajetória marcial do personagem. O jogador precisa aprendê-la, desenvolver proficiência e executar o comando.
+
+**COMMAND INPUT + TÉCNICA + PROFICIÊNCIA + ESTADO + TIMING → EXECUÇÃO**
+
+Controles e comandos individuais ainda serão definidos.
