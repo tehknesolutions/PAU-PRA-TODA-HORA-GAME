@@ -32,6 +32,45 @@ export function createFighter({ id, name, background = "untrained", body = {} })
   return fighter;
 }
 
+export function learnTechnique(fighter, technique) {
+  validateFighter(fighter);
+  if (!technique?.id || !technique?.name || !technique?.art || !technique?.family) throw new Error("technique requires id, name, art and family");
+  if (fighter.martial.techniques[technique.id]) throw new Error("technique already learned");
+  const next = structuredClone(fighter);
+  next.martial.techniques[technique.id] = { id: technique.id, name: technique.name, art: technique.art, family: technique.family, level: 1, xp: 0, uses: 0 };
+  next.history.push({ type: "technique-learned", techniqueId: technique.id });
+  validateFighter(next); return next;
+}
+
+export function getTechniqueProgress(fighter, techniqueId) {
+  validateFighter(fighter);
+  const technique = fighter.martial.techniques[techniqueId];
+  if (!technique) throw new Error("technique not learned");
+  return structuredClone(technique);
+}
+
+const techniqueLevelForXp = xp => 1 + Math.floor(Math.sqrt(Math.max(0, xp) / 100));
+
+export function useTechnique(fighter, techniqueId, { repetitions = 1 } = {}) {
+  validateFighter(fighter);
+  const current = fighter.martial.techniques[techniqueId];
+  if (!current) throw new Error("technique not learned");
+  const reps = Math.floor(Number(repetitions));
+  if (!Number.isFinite(reps) || reps <= 0) throw new Error("repetitions must be positive");
+  const next = structuredClone(fighter);
+  const technique = next.martial.techniques[techniqueId];
+  let gain = 0;
+  for (let i = 0; i < reps; i += 1) {
+    const lifetimeUse = technique.uses + i;
+    gain += 10 / (1 + lifetimeUse / 10);
+  }
+  technique.uses += reps;
+  technique.xp = round2(technique.xp + gain);
+  technique.level = techniqueLevelForXp(technique.xp);
+  next.history.push({ type: "technique-use", techniqueId, repetitions: reps, xpGain: round2(gain), totalUses: technique.uses, level: technique.level });
+  validateFighter(next); return next;
+}
+
 export function applyNeeds(fighter, changes = {}) {
   validateFighter(fighter); const next = structuredClone(fighter);
   for (const key of ["nutrition", "hydration", "sleep"]) next.needs[key] = bounded(next.needs[key] + Number(changes[key] ?? 0));
@@ -65,7 +104,6 @@ export function recover(fighter, { stamina = 0, fatigue = 0 } = {}) {
   next.history.push({ type: "recovery", stamina: Math.max(0, stamina), fatigue: Math.max(0, fatigue) }); validateFighter(next); return next;
 }
 
-// Experimental diagnostic only; balance weights remain TBD.
 export function getReadiness(fighter) {
   validateFighter(fighter); const staminaRatio = bounded((fighter.condition.stamina / fighter.condition.staminaMax) * 100); const needsAverage = (fighter.needs.nutrition + fighter.needs.hydration + fighter.needs.sleep) / 3; const recoveryState = 100 - fighter.condition.fatigue; const painState = 100 - fighter.condition.pain;
   return round2(bounded(staminaRatio * 0.4 + needsAverage * 0.25 + recoveryState * 0.25 + painState * 0.1));
