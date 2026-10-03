@@ -11,6 +11,14 @@ permissions:
   contents: read
 
 jobs:
+  runner-smoke:
+    name: Runner Smoke Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Runner alive
+        run: echo "runner-ok"
+
   fighter-core:
     name: Fighter Core Tests
     runs-on: ubuntu-latest
@@ -19,11 +27,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - name: Verify preinstalled Node
+        run: node --version
 
-      - name: Run fighter-core tests
-        working-directory: packages/fighter-core
-        run: npm test
+      - name: Run fighter-core tests directly
+        run: node --test packages/fighter-core/test/fighter-core.test.mjs
