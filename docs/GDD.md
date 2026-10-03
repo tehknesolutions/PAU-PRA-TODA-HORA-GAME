@@ -101,3 +101,18 @@ A progressão deve premiar desafio e qualidade de prática. Repetição sem desa
 ## Regra de design
 
 Nenhum atributo isolado representa "ser bom de luta". Performance emerge da interação entre corpo, técnica, experiência, integração, estado atual e habilidade do jogador.
+
+
+## Sistema de luta — Command Inputs
+
+O combate adota **command inputs de fighting games**, com referência de interação em Street Fighter. Combinações de direções, botões, sequências e timing podem executar técnicas especiais.
+
+Exemplo conceitual: **↓ → + ataque**.
+
+A referência de sensação é o princípio de golpes como o **Flash Kick de Guile**: o jogador precisa executar a entrada correta para produzir o golpe especial. No jogo, a técnica pertence à trajetória marcial do personagem e precisa ser aprendida/desenvolvida.
+
+**COMMAND INPUT + TÉCNICA + PROFICIÊNCIA + ESTADO + TIMING → EXECUÇÃO**
+
+A execução pode ser afetada por proficiência, coordenação, stamina, fadiga, dor/lesão, postura, distância, timing e integração com outras técnicas.
+
+Comandos individuais, número de botões, buffer, janelas de execução, cancel windows e demais parâmetros de balanceamento permanecem TBD.
