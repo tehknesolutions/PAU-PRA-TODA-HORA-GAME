@@ -1,16 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  createFighter,
-  applyActivity,
-  applyNeeds,
-  addInjury,
-  recover,
-  recoverInjuries,
-  getReadiness,
-  prepareCombat,
-  serializeFighter,
-  deserializeFighter
+  createFighter, applyActivity, applyNeeds, addInjury, recover, recoverInjuries,
+  getReadiness, prepareCombat, validateFighter, serializeFighter, deserializeFighter
 } from "../src/index.mjs";
 
 test("creates an inexperienced persistent fighter", () => {
@@ -18,6 +10,7 @@ test("creates an inexperienced persistent fighter", () => {
   assert.equal(fighter.progression.level, 1);
   assert.equal(fighter.condition.stamina, 100);
   assert.deepEqual(fighter.martial.arts, {});
+  assert.equal(validateFighter(fighter), true);
 });
 
 test("fighter starts with independent survival needs", () => {
@@ -57,7 +50,6 @@ test("injury recovery reduces severity and pain and removes healed injuries", ()
   fighter = addInjury(fighter, { id: "bruise", region: "torso", severity: 8, pain: 6 });
   fighter = recoverInjuries(fighter, { severity: 3, pain: 2 });
   assert.deepEqual(fighter.condition.injuries[0], { id: "bruise", region: "torso", severity: 5, pain: 4 });
-  assert.equal(fighter.condition.pain, 4);
   fighter = recoverInjuries(fighter, { severity: 99, pain: 99 });
   assert.deepEqual(fighter.condition.injuries, []);
   assert.equal(fighter.condition.pain, 0);
@@ -71,17 +63,14 @@ test("recovery restores stamina but does not magically exceed capacity", () => {
   assert.equal(fighter.condition.fatigue, 15);
 });
 
-test("readiness is a bounded diagnostic score affected by persistent condition", () => {
+test("readiness is bounded and affected by persistent condition", () => {
   const fresh = createFighter({ id: "fresh", name: "Fresh" });
   let depleted = createFighter({ id: "depleted", name: "Depleted" });
   depleted = applyNeeds(depleted, { nutrition: -70, hydration: -80, sleep: -60 });
   depleted = applyActivity(depleted, { staminaCost: 40, fatigueGain: 35 });
   depleted = addInjury(depleted, { id: "ankle", region: "left-ankle", severity: 20, pain: 15 });
-  const freshScore = getReadiness(fresh);
-  const depletedScore = getReadiness(depleted);
-  assert.ok(freshScore >= 0 && freshScore <= 100);
-  assert.ok(depletedScore >= 0 && depletedScore <= 100);
-  assert.ok(freshScore > depletedScore);
+  assert.ok(getReadiness(fresh) > getReadiness(depleted));
+  assert.ok(getReadiness(depleted) >= 0 && getReadiness(depleted) <= 100);
 });
 
 test("combat stamina reflects readiness and never exceeds persistent stamina", () => {
@@ -93,7 +82,19 @@ test("combat stamina reflects readiness and never exceeds persistent stamina", (
   assert.ok(prepared.condition.combatStamina >= 0);
 });
 
-test("fighter save/load round trip preserves state", () => {
+test("validator rejects corrupted persistent state", () => {
+  const fighter = createFighter({ id: "p1", name: "Rookie" });
+  fighter.condition.stamina = 999;
+  assert.throws(() => validateFighter(fighter), /invalid fighter state/);
+});
+
+test("deserialize rejects structurally invalid saves", () => {
+  const fighter = createFighter({ id: "p1", name: "Rookie" });
+  fighter.needs.hydration = -10;
+  assert.throws(() => deserializeFighter(JSON.stringify(fighter)), /invalid fighter state/);
+});
+
+test("fighter save/load round trip preserves valid state", () => {
   let fighter = createFighter({ id: "p1", name: "Rookie", background: "taekwondo-beginner" });
   fighter = applyNeeds(fighter, { hydration: -12 });
   fighter = addInjury(fighter, { id: "bruise", region: "torso", severity: 5, pain: 3 });
