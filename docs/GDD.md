@@ -1,4 +1,4 @@
-# GDD v0.1 — PAU PRA TODA OBRA
+# GDD v0.1 — Killer Fists: OranKork
 
 ## Core Loop
 
