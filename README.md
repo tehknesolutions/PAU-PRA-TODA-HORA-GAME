@@ -1,4 +1,4 @@
-# PAU PRA TODA OBRA
+# Killer Fists: OranKork
 
 > **O personagem não recebe poder. Ele constrói poder.**
 
@@ -6,7 +6,7 @@ Projeto de jogo marcial persistente criado a partir do Discovery do MIG PROJECTS
 
 ## Visão
 
-**PAU PRA TODA OBRA** é um **Survival Martial MMORPG / RPG + Life Simulation + Progression-by-Use + 3D Fighting System**.
+**Killer Fists: OranKork** é um **Survival Martial MMORPG / RPG + Life Simulation + Progression-by-Use + 3D Fighting System**.
 
 O jogador cria seu lutador do zero, começa como iniciante e constrói corpo, técnica, experiência, carreira e legado através de treino, sobrevivência, aprendizado e combate, com o objetivo de se tornar o maior lutador do mundo.
 
@@ -19,7 +19,7 @@ O Level geral representa a trajetória; ele não concede poder gratuitamente. Ca
 ## Estado
 
 - Discovery conceitual: consolidado
-- Nome: PAU PRA TODA OBRA
+- Nome: Killer Fists: OranKork
 - PDD/GDD: v0.1
 - Implementação: ainda não iniciada
 
