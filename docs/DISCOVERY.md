@@ -1,4 +1,4 @@
-# DISCOVERY — PAU PRA TODA OBRA
+# DISCOVERY — Killer Fists: OranKork
 
 Status: **APROVADO / consolidado a partir da sessão de Discovery**
 
