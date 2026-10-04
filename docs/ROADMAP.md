@@ -1,158 +1,138 @@
-# ROADMAP v0.1 — PAU PRA TODA OBRA
+# ROADMAP v0.2 — Killer Fists: OranKork
 
-O roadmap evita tentar construir o MMORPG inteiro antes de provar seu núcleo.
+O roadmap atual prioriza colocar o **fighting game 2D jogável** o mais cedo possível. A antiga sequência centrada em MMORPG/3D foi superada pela nova direção aprovada.
 
-## M0 — Fundação documental — CONCLUÍDO
+## M0 — Reboot canônico — CONCLUÍDO
 
-- README
-- Discovery consolidado
-- PDD v0.1
-- GDD v0.1
-- regras de canon/soberania
-- roadmap inicial
+- título Killer Fists: OranKork;
+- OranKork como organização antagonista;
+- Norman “The Psychic” Albert como líder/vilão;
+- 2D sprites/pixel art;
+- referência visual Street Fighter Alpha 2;
+- progressão desde lutador totalmente magro e sem capacidade;
+- roster 15 + 2 secretos;
+- sistema de comandos especiais e elementos.
 
-## M1 — Fighter Core
+## M1 — Fighting Core 2D
 
-Objetivo: representar um lutador persistente sem depender de gráficos finais.
+- arena 2D;
+- dois fighters;
+- andar para esquerda/direita;
+- pular/agachar;
+- soco;
+- chute;
+- vida;
+- hit/hurt boxes;
+- hit stun;
+- knockback;
+- rounds;
+- vitória/derrota.
 
-- identidade
-- background
-- estado corporal
-- atributos/capacidades
-- stamina persistente
-- stamina de combate
-- fadiga
-- saúde/condição
-- persistência/save
+**Gate:** uma luta completa precisa ser jogável do início ao KO.
 
-Gate: criar personagem, salvar, carregar e simular mudança de estado deterministicamente.
+## M2 — Command Interpreter
 
-## M2 — Progression-by-Use
+- histórico temporal de inputs;
+- direções;
+- botões;
+- simultaneidade;
+- sequências;
+- charge por duração;
+- janela de tolerância;
+- prioridade de comandos.
 
-- experiência geral
-- skills físicas
-- artes marciais
-- famílias técnicas
-- técnica individual
-- XP por uso
-- retorno decrescente
-- histórico de treino/uso
+**Gate:** reconhecer deterministicamente comandos simples, sequenciais e carregados.
 
-Gate: uma ação treinável deve produzir evolução rastreável sem pontos gratuitos de level-up.
+## M3 — Elemental Core
 
-## M3 — Training Vertical Slice
+Implementar a linguagem universal:
 
-- treino de força/hipertrofia
-- cardio
-- mobilidade/flexibilidade
-- técnica marcial
-- consumo de stamina
-- fadiga
-- recuperação
-- adaptação corporal
+- Electric `CIMA + SOCO`;
+- Water `BAIXO + SOCO`;
+- Fire `CIMA + CHUTE`;
+- Wind `BAIXO + CHUTE`;
+- Earth `ESQUERDA → DIREITA + CHUTE`.
 
-Gate: uma semana simulada de treinamento deve produzir resultados diferentes conforme rotina escolhida.
+**Gate:** os cinco comandos funcionam sobre o mesmo interpretador e podem ser configurados por personagem.
 
-## M4 — Combat Vertical Slice
+## M4 — Norman Vertical Slice
 
-Primeiro confronto funcional com dois lutadores.
+Primeiro personagem usado para provar especiais complexos.
 
-- movimentação
-- striking básico
-- defesa
-- stamina de combate
-- dano
-- KO/TKO básico
-- câmera
-- integração com progressão
+- Tornado Kick;
+- Elbow;
+- Psychic;
+- completar/validar seus cinco golpes especiais aprovados;
+- efeitos e feedback dos elementos;
+- CPU básica para combate contra ele.
 
-Candidatos iniciais do Discovery: Khabib Nurgaliyev e Al Quinto.
+**Gate:** Psychic reconhece `charge 3s → Electric → Water → Fire` sem disparos falsos.
 
-Gate: lutar altera experiência/skills e o estado pós-luta persiste.
+## M5 — Sprite Pipeline
 
-## M5 — Grappling / MMA
+- padrão de resolução e escala;
+- idle;
+- walk;
+- jump/crouch;
+- punch/kick;
+- hit;
+- KO;
+- especiais;
+- animação quadro a quadro;
+- importação dos assets aprovados.
 
-- clinch
-- takedowns
-- controle
-- escapes
-- chão
-- submissões
-- transições
+**Gate:** personagem completo em sprite art mantém leitura e fluidez no combate real.
 
-Gate: combate em pé e grappling coexistem no mesmo confronto sem serem minigames desconectados.
+## M6 — Roster 15
 
-## M6 — Survival Loop
+Implementar progressivamente os 15 personagens principais, preservando identidade cultural/marcial e golpes próprios.
 
-- nutrição
-- hidratação
-- sono
-- recuperação
-- dor/lesões
-- calendário
-- rotina
+**Gate:** todos selecionáveis e capazes de completar uma luta.
 
-Gate: preparação influencia treino e luta sem transformar o jogo em manutenção excessiva.
+## M7 — Secret Fighters
 
-## M7 — Martial Learning
+- Connor McAlpha;
+- Winston Charlie;
+- condições de desbloqueio TBD;
+- rivalidades específicas.
 
-- professores
-- academias
-- currículos
-- pré-requisitos
-- descoberta de técnicas
-- proficiência
-- integração entre artes
+## M8 — Progression / Training
 
-Gate: aprender ≠ dominar; dois personagens podem desenvolver trajetórias marciais distintas.
+- estado inicial extremamente magro;
+- treino;
+- crescimento corporal;
+- evolução de capacidade de luta;
+- domínio de técnicas;
+- reconhecimento/ranking.
 
-## M8 — Adaptive Body
+**Gate:** jogador consegue perceber diferença real entre o personagem inicial e sua versão treinada.
 
-- composição corporal
-- massa muscular
-- efeitos visuais do treinamento
-- relação corpo/capacidades
-- peso dinâmico
+## M9 — OranKork Campaign
 
-Gate: trajetórias de treino diferentes produzem corpos e capacidades diferentes.
+- estrutura da organização;
+- progressão narrativa;
+- rivais e confrontos;
+- Grande Guerra;
+- caminho até Norman;
+- boss fight.
 
-## M9 — Career / World
+**Gate:** campanha completa conduz do iniciante ao confronto final com Norman.
 
-- mundo jogável
-- economia
-- trabalho/recursos
-- competições
-- ranking
-- camps
-- calendário esportivo
-- progressão social
+## M10 — Polish
 
-## M10 — Multiplayer/MMORPG Foundation
-
-Escopo técnico TBD após validação dos sistemas locais/core.
-
-- identidade persistente
-- autoridade de estado
-- sincronização
-- PvE/PvP
-- anti-cheat/validação
-- economia persistente
-
-## M11 — Life Cycle & Legacy
-
-- envelhecimento
-- auge/veterania
-- aposentadoria
-- professor/mestre
-- academia
-- alunos
-- transmissão de conhecimento
-- legado
+- HUD final;
+- seleção de personagens;
+- telas de versus/vitória;
+- cenários;
+- áudio;
+- efeitos;
+- balanceamento;
+- performance;
+- controles para teclado/gamepad;
+- QA.
 
 ## Princípio de execução
 
-Construir primeiro o menor sistema que prove a fantasia central:
+> **Primeiro provar a luta. Depois expandir o mundo.**
 
-> **treinar algo → gastar recursos → recuperar → melhorar especificamente aquilo → levar essa melhoria para uma luta real.**
-
-Se esse ciclo não for divertido, aumentar o mundo não resolve o problema.
+A implementação não deve ficar bloqueada esperando todos os sprites finais: sistemas de combate podem avançar com placeholders e receber os assets aprovados posteriormente.
