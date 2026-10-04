@@ -1,179 +1,117 @@
 # DISCOVERY — Killer Fists: OranKork
 
-Status: **APROVADO / consolidado a partir da sessão de Discovery**
+Status: **APROVADO / consolidado com as decisões mais recentes**
 
 ## 1. Fantasia central
 
-O jogador cria um personagem do zero, inicia como lutador iniciante e busca tornar-se **o maior lutador do mundo**.
+O jogador começa **totalmente magro e sem nenhuma capacidade de luta**. Através de treinamento e experiência, desenvolve corpo e técnica até poder tornar-se o lutador mais conhecido e enfrentar a ameaça da OranKork.
 
-O poder deve ser conquistado por sangue, suor, tempo, treino e experiência. O personagem pode tornar-se extraordinariamente forte, técnico e completo, mas isso deve ser resultado da trajetória vivida.
+## 2. Objetivo do jogo
 
-## 2. Identidade do jogo
+A campanha converge para derrotar **Norman “The Psychic” Albert**, dono/líder da organização maligna **OranKork**.
 
-- Survival Martial MMORPG / RPG
-- Life Simulation
-- Progression-by-Use
-- 3D Fighting System
-- Combate com resposta de fighting game, profundidade de MMA e apresentação cinematográfica
-- Referência de qualidade visual: fighting games 3D modernos
+A OranKork é o eixo antagonista da nova versão do jogo e participa do conflito de escala crescente associado à Grande Guerra.
 
-## 3. Personagem persistente
+## 3. Identidade atual
 
-- Criado do zero como em MMORPG
-- Background define ponto de partida, não classe permanente
-- Começa como iniciante
-- Evolui através daquilo que treina, pratica e utiliza
-- Vitória concede mais EXP, mas derrota também produz experiência
-- Histórico de combate e treino participa da identidade marcial
-- Estilo pessoal emerge da trajetória
+- Fighting game 2D;
+- progressão marcial por treinamento;
+- sprites/pixel art desenhados à mão;
+- anime/mangá como influência visual;
+- referência visual principal: **Street Fighter Alpha 2**;
+- comandos especiais por direções, botões, sequências e charge;
+- 15 personagens principais + 2 secretos.
 
-## 4. Progressão por uso
+## 4. Direção visual
 
-O Level geral representa experiência acumulada, mas não substitui competência.
+Os personagens e cenários são representados como **gráficos 2D em Pixel Art / Sprites**, desenhados à mão e animados quadro a quadro com alta fluidez.
 
-Cada camada pode evoluir independentemente:
+A intenção é se afastar de aparência realista/digitalizada e também da estética genérica associada a imagens de IA. As artes de personagem devem permanecer focadas no sprite principal, sem pequenas animações/cartuns extras na parte inferior.
 
-- atributos físicos
-- capacidades marciais
-- artes marciais
-- famílias técnicas
-- técnicas individuais
-- integração entre técnicas/artes
-- experiência prática
-- estilo pessoal
+## 5. Sistema de luta
 
-Exemplo aprovado conceitualmente: uma técnica como **Bandal Tchagui (Taekwondo)** possui sua própria progressão conforme treino e aplicação, em espírito semelhante às skills desenvolvidas por uso em RPGs persistentes.
+O sistema segue a lógica de fighting games clássicos: determinadas combinações de direções, tempo e botões produzem ataques especiais.
 
-## 5. Artes marciais
+Botões conceituais atuais:
 
-- Artes reais preservam identidade e proveniência
-- Sistemas originais podem coexistir sem apagar a origem das técnicas
-- Cada estilo é aprendível e evoluível
-- Não existe limite artificial de quantas artes podem ser aprendidas
-- Tempo, professores, recursos, corpo, recuperação e dedicação são limites naturais
-- Aprender uma arte não significa dominá-la
-- Currículo: professor/escola → pré-requisitos → ensino → treino → proficiência → sparring → aplicação → maestria
-- Conhecer duas artes não concede automaticamente integração entre elas
+- `SOCO`
+- `CHUTE`
+- direções (`CIMA`, `BAIXO`, `ESQUERDA`, `DIREITA`)
 
-## 6. Corpo adaptativo
+Existem comandos instantâneos, sequenciais e de charge.
 
-Inspirado no princípio de corpo persistente de jogos de simulação: a aparência e as capacidades mudam conforme a vida do personagem.
+## 6. Sistema elemental universal
 
-Cada foco produz adaptações diferentes:
+Todos os personagens possuem os cinco elementos:
 
-- hipertrofia → massa muscular + contribuição para força
-- força → capacidade de produção de força
-- cardio → endurance/capacidade aeróbica/recuperação
-- flexibilidade → amplitude
-- mobilidade → deslocamento e transições
-- potência → produção rápida de força
-- equilíbrio → estabilidade
-- coordenação → controle motor
+- **Electric:** `CIMA + SOCO`
+- **Water:** `BAIXO + SOCO`
+- **Fire:** `CIMA + CHUTE`
+- **Wind:** `BAIXO + CHUTE`
+- **Earth:** `ESQUERDA → DIREITA + CHUTE`
 
-Trade-offs são orgânicos, não penalidades arbitrárias. Um personagem pode desenvolver múltiplas capacidades em alto nível, mas isso exige mais trabalho, tempo e integração.
+## 7. Norman “The Psychic” Albert
 
-## 7. Stamina Core
+Norman é o dono/líder da OranKork. Sua construção de vilão usa como referências **M. Bison** para o arquétipo de chefe de fighting game/poder psíquico e **Adolf Hitler** como referência histórica para autoritarismo e expansionismo.
 
-**Stamina é o recurso operacional central.** Sem stamina suficiente, o personagem não consegue treinar ou lutar adequadamente.
+Golpes aprovados registrados:
 
-Duas escalas:
+- **Tornado Kick:** `CIMA (3s) → CHUTE`
+- **Elbow:** `BAIXO (2s) → CIMA → BAIXO → SOCO`
+- **Psychic:** `CHARGE 3s → Electric → Water → Fire`
 
-1. **Stamina Persistente** — energia disponível na vida/rotina.
-2. **Stamina de Combate** — capacidade operacional durante uma luta, condicionada pelo estado em que o personagem chegou ao combate.
+Norman possui **5 golpes principais/especiais** no total; os demais devem respeitar as decisões aprovadas do Discovery quando consolidados.
 
-Cardio influencia capacidade, eficiência e recuperação, mas não é sinônimo de stamina.
+## 8. Khabib Nurgaliyev
 
-## 8. Survival / necessidades
+Lutador inspirado em Khabib Nurmagomedov, com base no Cáucaso e em wrestling/grappling. Sua estrutura também foi definida com **5 golpes**, incluindo o **Pilão Giratório** como quinto golpe.
 
-Sistemas relacionados, mas distintos:
+## 9. Roster principal
 
-- nutrição
-- hidratação
-- sono
-- stamina persistente
-- stamina de combate
-- fadiga
-- saúde/condição
-- dor/lesões
+1. Norman “The Psychic” Albert — OranKork / Psychic + elementos — referência: M. Bison + Adolf Hitler.
+2. Khabib Nurgaliyev — Cáucaso / Wrestling / Grappling — referência: Khabib Nurmagomedov.
+3. Akira Mori — Japão / Karate — referência: Mas Oyama.
+4. Liang Wei — China / Kung Fu — referência: Bruce Lee.
+5. Somchai Prasert — Tailândia / Muay Thai — referência: Buakaw Banchamek.
+6. Seo-jun Han — Coreia / Taekwondo — referência: Taekwondo coreano.
+7. João Batista — Brasil / Capoeira — referência: Mestre Bimba.
+8. Amara Okoye — África / Wrestling — referência: Laamb senegalês.
+9. Viktor Volkov — Leste Europeu / Sambo — referência: Combat Sambo.
+10. Diego Reyes — México / Boxe — referência: Julio César Chávez.
+11. Maeve O'Connor — Irlanda / Boxe — referência: Katie Taylor + tradição pugilística irlandesa.
+12. Arjun Singh — Índia / Kushti — referência: The Great Gama.
+13. Leila Haddad — Oriente Médio / Norte da África — referência concreta ainda TBD.
+14. Nikolaos Drakos — Grécia / Pankration — referência: Pankration + esculturas de atletas gregos antigos.
+15. Malia Kealoha — Havaí / Polinésia — referência: Kapu Kuʻialua + tradições marciais havaianas.
 
-Loop central:
+## 10. Personagens secretos
 
-`ABASTECER → TREINAR → GASTAR → RECUPERAR → ADAPTAR → CRESCER → PREPARAR → LUTAR → APRENDER → RECUPERAR`
+### Connor McAlpha
+Rival de **Khabib Nurgaliyev**.
 
-## 9. Tempo e vida
+### Winston Charlie
+Rival de **Norman Albert**. Substitui o nome anterior Ernst Gregory e é inspirado em **Winston Churchill**.
 
-- ciclo dia/noite
-- calendário
-- semanas e temporadas
-- compromissos
-- academias e horários
-- camps
-- competições
-- recuperação
-- envelhecimento
-- atividades longas podem avançar tempo de forma controlada
+## 11. Progressão
 
-O personagem percorre juventude, desenvolvimento, auge, veterania e aposentadoria competitiva. A vida marcial pode continuar como professor, mestre ou treinador.
+O personagem do jogador não recebe capacidade de luta pronta. O jogo começa com um físico extremamente magro e incapaz de combater em alto nível. O treinamento transforma gradualmente suas capacidades.
 
-## 10. Legado
+A ideia anterior de **progression-by-use** permanece útil nesta nova versão quando aplicada diretamente ao treino e domínio marcial.
 
-A jornada individual pode terminar, mas elementos conquistados podem permanecer no mundo: reputação, academia, alunos, registros, conhecimento transmissível, troféus, relações e impacto histórico.
+## 12. Decisões superadas
 
-## 11. Combate
+A direção anterior de **Survival Martial MMORPG / RPG + Life Simulation + 3D Fighting System** foi substituída como identidade principal.
 
-Sensação aprovada:
+O que continua aproveitável da fase anterior é aquilo que fortalece a fantasia atual de construir um lutador através de treino, prática e evolução real do personagem.
 
-- Arcade + Simulação
-- apresentação cinematográfica
-- MMA/fighting game híbrido
-- câmera híbrida dinâmica
-- movimentação híbrida
+## 13. Referências e soberania
 
-Condições de vitória incluem:
-
-- KO
-- TKO
-- submissão
-- decisão
-- interrupções contextuais apropriadas
-
-## 12. Dano adaptativo
-
-O sistema pode representar internamente:
-
-- vida/condição
-- stamina
-- dano localizado
-- knockdown
-- stun
-- recuperação
-- cortes
-- inchaço
-- sangramento
-- lesões e penalidades temporárias
-
-A interface deve permanecer legível; o corpo e o comportamento do lutador comunicam parte do estado.
-
-## 13. Lutadores iniciais do Discovery
-
-### Khabib Nurgaliyev
-Personagem inspirado fortemente no perfil marcial de Khabib Nurmagomedov, sem ser o atleta real. Foco conceitual em MMA, wrestling/sambo, pressão, quedas, controle e grappling.
-
-### Al Quinto
-Personagem inspirado no contexto do adversário citado durante o Discovery, com identidade própria a ser aprofundada.
-
-Esses personagens não substituem o protagonista criado pelo jogador no modo persistente.
-
-## 14. Referências e soberania
-
-Taijifu, HNK, TEHKNÉ, outros jogos, chats e repositórios podem fornecer know-how, taxonomias, técnicas, padrões e aprendizados.
+Taijifu, HNK, TEHKNÉ, pessoas reais, culturas, artes marciais, estátuas e outros jogos podem fornecer know-how e referências.
 
 **Nenhuma referência externa governa automaticamente este projeto.**
 
 `CONSULTA ≠ IMPORTAÇÃO ≠ APROVAÇÃO ≠ CÂNONE`
 
-## 15. Princípio final
+## 14. Princípio atual
 
-> **O personagem não recebe poder. Ele constrói poder.**
-
-> **SANGUE + SUOR + TEMPO + EXPERIÊNCIA → EVOLUÇÃO.**
+> **Comece sem saber lutar. Treine. Evolua. Torne-se conhecido. Enfrente a OranKork.**
