@@ -1,0 +1,1 @@
+import test from "node:test";import assert from "node:assert/strict";import {GAME_SETTINGS} from "../src/game/config.js";test("Phaser viewport configured",()=>{assert.equal(GAME_SETTINGS.width,960);assert.equal(GAME_SETTINGS.height,540);assert.equal(GAME_SETTINGS.pixelArt,true)});
